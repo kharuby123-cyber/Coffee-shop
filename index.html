@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoffeeShop - Hương Vị Cà Phê Việt Đích Thực</title>
+  <meta name="description" content="Chào mừng đến với CoffeeShop - Trải nghiệm cà phê phin truyền thống, Freeze đá xay sảng khoái, trà thanh mát và bánh ngọt cao cấp.">
+  <!-- Font Awesome 7 CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+        <div class="logo-text">Coffee<span>Shop</span></div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link active">Trang chủ</a>
+        <a href="products.html" class="nav-link">Sản phẩm</a>
+        <a href="contact.html" class="nav-link">Liên hệ</a>
+        <a href="javascript:void(0)" class="nav-link" id="navOrdersLink" title="Xem đơn hàng đã lưu"><i class="fa-solid fa-receipt" style="font-size: 13px; margin-right: 5px; color: var(--color-accent-gold);"></i>Đơn Hàng</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="products.html" class="header-search-btn" title="Tìm kiếm món" id="headerSearchBtn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+
+        <button class="cart-toggle-btn" id="cartToggleBtn" title="Xem giỏ hàng">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO CAROUSEL SECTION
+       ========================================================================== -->
+  <section class="hero-carousel-section" id="heroCarouselSection">
+    <div class="hero-carousel" id="heroCarousel">
+      
+      <!-- Slide 1: Cà phê nguyên bản -->
+      <div class="carousel-slide active" id="slide1">
+        <div class="slide-bg" style="background-image: url('images/banners/banner1.jpg');"></div>
+        <div class="slide-overlay"></div>
+        <div class="container" style="height: 100%; display: flex; align-items: center;">
+          <div class="slide-content">
+            <span class="slide-badge"><i class="fa-solid fa-mug-saucer"></i> Nghệ Thuật Cà Phê Việt</span>
+            <h1 class="slide-title">Đậm Đà Tinh Hoa <br><span>Hạt Cà Phê Mộc</span></h1>
+            <p class="slide-desc">Sự phối trộn hoàn hảo giữa Robusta & Arabica thượng hạng trồng từ cao nguyên Việt Nam màu mỡ, tạo nên những giọt cà phê đượm hương nồng nàn đánh thức đam mê.</p>
+            <div class="slide-actions">
+              <a href="products.html?category=1" class="btn btn-primary" id="btnExploreCoffee">
+                <span>Khám Phá Menu</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="contact.html" class="btn btn-secondary">Đặt Bàn Ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Freeze & Trà Thanh Mát -->
+      <div class="carousel-slide" id="slide2">
+        <div class="slide-bg" style="background-image: url('images/banners/banner2.jpg');"></div>
+        <div class="slide-overlay"></div>
+        <div class="container" style="height: 100%; display: flex; align-items: center;">
+          <div class="slide-content">
+            <span class="slide-badge"><i class="fa-solid fa-snowflake"></i> Sảng Khoái Tươi Mát</span>
+            <h2 class="slide-title">Đá Xay Freeze & <br><span>Trà Trái Cây Thanh Ngọt</span></h2>
+            <p class="slide-desc">Hòa quyện kem whip béo mịn, thạch giòn tan cùng hương trà sen vàng, trà thạch vải và freeze sô-cô-la sảng khoái tràn đầy năng lượng ngày mới.</p>
+            <div class="slide-actions">
+              <a href="products.html?category=2" class="btn btn-primary">
+                <span>Thưởng Thức Freeze</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="products.html?category=3" class="btn btn-secondary">Xem Bộ Sưu Tập Trà</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Bánh ngọt & Tráng miệng -->
+      <div class="carousel-slide" id="slide3">
+        <div class="slide-bg" style="background-image: url('images/banners/banner3.jpg');"></div>
+        <div class="slide-overlay"></div>
+        <div class="container" style="height: 100%; display: flex; align-items: center;">
+          <div class="slide-content">
+            <span class="slide-badge"><i class="fa-solid fa-cake-candles"></i> Ngọt Ngào Tinh Tế</span>
+            <h2 class="slide-title">Bánh Ngọt Cao Cấp <br><span>Chuẩn Vị Tiramisu</span></h2>
+            <p class="slide-desc">Từng lớp bánh Mousse ca cao mềm mại, Tiramisu thơm béo và cheesecake chanh dây quyến rũ được nướng mới mỗi ngày, đồng điệu tuyệt hảo cùng tách cà phê thơm.</p>
+            <div class="slide-actions">
+              <a href="products.html?category=4" class="btn btn-primary">
+                <span>Khám Phá Bánh Ngọt</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="products.html" class="btn btn-secondary">Xem Toàn Bộ Menu</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-btn prev" id="carouselPrevBtn" aria-label="Previous Slide">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="carousel-btn next" id="carouselNextBtn" aria-label="Next Slide">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <div class="indicator-dot active" data-index="0"></div>
+        <div class="indicator-dot" data-index="1"></div>
+        <div class="indicator-dot" data-index="2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURES / VALUE PROPOSITION
+       ========================================================================== -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <div class="feature-text">
+            <h4>100% Cà Phê Mộc</h4>
+            <p>Hạt Robusta & Arabica chọn lọc bằng tay từ cao nguyên</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Giao Hàng Nhanh 30 Phút</h4>
+            <p>Bảo toàn độ thơm ngon, nóng giòn hoặc mát lạnh</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Chuẩn Vị Barista</h4>
+            <p>Pha phin truyền thống và espresso tiêu chuẩn quốc tế</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="feature-text">
+            <h4>Trải Nghiệm Ấm Cúng</h4>
+            <p>Không gian thưởng thức hiện đại kết nối cảm xúc</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LATEST PRODUCTS SECTION
+       ========================================================================== -->
+  <section class="section" id="latestProductsSection">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Thực Đơn Nổi Bật</span>
+        <h2 class="section-title">Sản Phẩm Mới Nhất</h2>
+        <p class="section-desc">Những món đồ uống tươi mới và bánh ngọt hấp dẫn nhất vừa được đội ngũ Barista hoàn thiện công thức.</p>
+      </div>
+
+      <div class="products-grid" id="latestProductsGrid">
+        <!-- Rendered via js/main.js from data/product.csv -->
+      </div>
+
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="products.html" class="btn btn-outline-dark" id="btnViewAllProducts">
+          <span>Xem Toàn Bộ 46 Sản Phẩm</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STORY / BRAND PROMO SECTION
+       ========================================================================== -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-images-stack">
+          <img src="images/banners/banner1.jpg" alt="Câu chuyện cà phê" class="story-img-main">
+          <div class="story-badge-floating">
+            <span class="badge-num">100%</span>
+            <span class="badge-lbl">Hạt Cà Phê Mộc Cao Nguyên Việt Nam</span>
+          </div>
+        </div>
+
+        <div class="story-content">
+          <span class="section-tag">Câu Chuyện Thương Hiệu</span>
+          <h2 class="section-title">Hương Vị Được Nuôi Dưỡng Từ Đất Mẹ Tây Nguyên</h2>
+          <p>Tại <strong>CoffeeShop</strong>, mỗi tách cà phê là kết tinh của sự tâm huyết. Chúng tôi tuyển chọn từng hạt cà phê chín mọng từ vùng đất đỏ bazan màu mỡ tại Đắk Lắk và Cầu Đất (Đà Lạt).</p>
+          <p>Qua quy trình rang mộc chuẩn xác, bảo tồn trọn vẹn hương hoa cỏ thanh tao của Arabica và vị đậm đà sâu lắng của Robusta. Kết hợp cùng kỹ thuật pha phin giọt giọt truyền thống, tạo nên phong vị khó quên.</p>
+          
+          <div class="story-stats">
+            <div class="stat-item">
+              <h3>15+</h3>
+              <p>Năm kinh nghiệm rang xay</p>
+            </div>
+            <div class="stat-item">
+              <h3>46+</h3>
+              <p>Món thức uống & bánh ngọt</p>
+            </div>
+            <div class="stat-item">
+              <h3>99%</h3>
+              <p>Khách hàng hài lòng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+            <div class="logo-text">Coffee<span>Shop</span></div>
+          </a>
+          <p class="footer-desc">
+            Không gian kết nối đam mê cà phê Việt. Mang đến trải nghiệm thưởng thức tinh tế với các dòng cà phê phin, đá xay freeze mát lạnh và bánh ngọt thủ công hảo hạng.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khám Phá Menu</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=1">Cà phê truyền thống</a></li>
+            <li><a href="products.html?category=2">Thức uống Freeze đá xay</a></li>
+            <li><a href="products.html?category=3">Trà trái cây tự nhiên</a></li>
+            <li><a href="products.html?category=4">Bánh ngọt & Tiramisu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liên Kết Nhanh</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html">Thực đơn đầy đủ</a></li>
+            <li><a href="contact.html">Thông tin liên hệ</a></li>
+            <li><a href="contact.html#feedbackForm">Gửi phản hồi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Đăng Ký Nhận Ưu Đãi</h4>
+          <div class="footer-newsletter">
+            <p>Nhận ngay mã giảm 20% cho đơn hàng đầu tiên và tin tức mới nhất từ CoffeeShop.</p>
+            <div class="newsletter-box">
+              <input type="email" placeholder="Email của bạn..." aria-label="Email">
+              <button class="btn btn-primary" onclick="alert('Cảm ơn bạn đã đăng ký nhận bản tin!');">Gửi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CoffeeShop. All rights reserved. Tận tâm trong từng giọt cà phê.</p>
+        <p>Hotline: 1900 6868 - Giờ mở cửa: 06:30 - 23:00</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CART SLIDE DRAWER
+       ========================================================================== -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>
+        <i class="fa-solid fa-bag-shopping"></i>
+        Giỏ Hàng Của Bạn
+      </h3>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically populated by js/cart.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-lbl">Tổng cộng:</span>
+        <span class="cart-total-val" id="cartDrawerTotal">0 đ</span>
+      </div>
+      <button class="btn btn-primary checkout-btn" id="cartCheckoutBtn">
+        <span>Tiến Hành Đặt Hàng</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       QUICK VIEW MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="quickViewBackdrop">
+    <div class="quickview-modal-dialog">
+      <button class="modal-close-btn" id="quickViewCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="quickview-grid">
+        <div class="quickview-image-box">
+          <img id="modalProductImg" src="" alt="Sản phẩm">
+        </div>
+        <div class="quickview-details">
+          <span class="quickview-cat-badge" id="modalProductCat">Cà phê</span>
+          <h3 class="quickview-title" id="modalProductTitle">Tên sản phẩm</h3>
+          <div class="quickview-price" id="modalProductPrice">0 đ</div>
+          <p class="quickview-desc" id="modalProductDesc">Mô tả sản phẩm</p>
+
+          <div class="quickview-actions-row">
+            <div class="qty-picker-box">
+              <button onclick="changeModalQty(-1)"><i class="fa-solid fa-minus"></i></button>
+              <span id="modalQtyDisplay">1</span>
+              <button onclick="changeModalQty(1)"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <button class="btn btn-primary" onclick="addModalToCart()">
+              <i class="fa-solid fa-cart-plus"></i>
+              Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

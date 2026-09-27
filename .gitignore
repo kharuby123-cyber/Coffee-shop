@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coffeeshop.db*
+.env
+*.log
+.DS_Store
+Thumbs.db

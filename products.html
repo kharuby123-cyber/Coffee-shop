@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực Đơn Sản Phẩm - CoffeeShop</title>
+  <meta name="description" content="Khám phá toàn bộ thực đơn CoffeeShop: Cà phê phin truyền thống, Freeze đá xay, Trà hoa quả tươi mát và Bánh ngọt thơm lừng.">
+  <!-- Font Awesome 7 CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+        <div class="logo-text">Coffee<span>Shop</span></div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="products.html" class="nav-link active">Sản phẩm</a>
+        <a href="contact.html" class="nav-link">Liên hệ</a>
+        <a href="javascript:void(0)" class="nav-link" id="navOrdersLink" title="Xem đơn hàng đã lưu"><i class="fa-solid fa-receipt" style="font-size: 13px; margin-right: 5px; color: var(--color-accent-gold);"></i>Đơn Hàng</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" title="Xem giỏ hàng">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE HEADER / BANNER
+       ========================================================================== -->
+  <section style="background: linear-gradient(rgba(26, 18, 11, 0.88), rgba(26, 18, 11, 0.94)), url('images/banners/banner2.jpg') center/cover no-repeat; padding: 70px 0 50px 0; text-align: center; color: #fff;">
+    <div class="container">
+      <span class="section-tag" style="background: rgba(229, 169, 60, 0.2); color: var(--color-accent-gold); margin-bottom: 14px;"><i class="fa-solid fa-sparkles"></i> Thực Đơn Độc Quyền</span>
+      <h1 style="font-family: var(--font-heading); font-size: 42px; margin-bottom: 12px;">Khám Phá Hương Vị CoffeeShop</h1>
+      <p style="font-size: 16px; color: var(--color-text-light-muted); max-width: 620px; margin: 0 auto;">
+        Tuyển tập đầy đủ các dòng cà phê phin đậm đà, Freeze đá xay sảng khoái, trà tự nhiên và bánh ngọt thủ công hảo hạng.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PRODUCTS CATALOG SECTION
+       ========================================================================== -->
+  <main class="section" style="padding-top: 40px;">
+    <div class="container">
+      
+      <!-- Filter Toolbar -->
+      <div class="catalog-toolbar-wrapper">
+        <!-- Categories Filter Tabs -->
+        <div class="category-filter-nav" id="categoryFilterNav">
+          <!-- Populated dynamically by js/main.js -->
+        </div>
+
+        <!-- Search & Sort Row -->
+        <div class="catalog-actions-row">
+          <div class="search-input-box">
+            <input type="text" id="productSearchInput" placeholder="Tìm theo tên cà phê, bánh ngọt, trà..." aria-label="Tìm kiếm sản phẩm">
+            <span class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+            <div class="sort-select-box">
+              <label for="productSortSelect">Sắp xếp:</label>
+              <select id="productSortSelect">
+                <option value="default">Mặc định</option>
+                <option value="price-asc">Giá: Thấp đến cao</option>
+                <option value="price-desc">Giá: Cao đến thấp</option>
+                <option value="name-asc">Tên: A → Z</option>
+                <option value="name-desc">Tên: Z → A</option>
+                <option value="newest">Mới nhất</option>
+              </select>
+            </div>
+
+            <div class="products-counter-badge" id="productsCountBadge">
+              Hiển thị 46 sản phẩm
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsCatalogGrid">
+        <!-- Populated dynamically by js/main.js from data/category.csv and data/product.csv -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       CART SLIDE DRAWER
+       ========================================================================== -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>
+        <i class="fa-solid fa-bag-shopping"></i>
+        Giỏ Hàng Của Bạn
+      </h3>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically populated by js/cart.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-lbl">Tổng cộng:</span>
+        <span class="cart-total-val" id="cartDrawerTotal">0 đ</span>
+      </div>
+      <button class="btn btn-primary checkout-btn" id="cartCheckoutBtn">
+        <span>Tiến Hành Đặt Hàng</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       QUICK VIEW MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="quickViewBackdrop">
+    <div class="quickview-modal-dialog">
+      <button class="modal-close-btn" id="quickViewCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="quickview-grid">
+        <div class="quickview-image-box">
+          <img id="modalProductImg" src="" alt="Sản phẩm">
+        </div>
+        <div class="quickview-details">
+          <span class="quickview-cat-badge" id="modalProductCat">Cà phê</span>
+          <h3 class="quickview-title" id="modalProductTitle">Tên sản phẩm</h3>
+          <div class="quickview-price" id="modalProductPrice">0 đ</div>
+          <p class="quickview-desc" id="modalProductDesc">Mô tả sản phẩm</p>
+
+          <div class="quickview-actions-row">
+            <div class="qty-picker-box">
+              <button onclick="changeModalQty(-1)"><i class="fa-solid fa-minus"></i></button>
+              <span id="modalQtyDisplay">1</span>
+              <button onclick="changeModalQty(1)"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <button class="btn btn-primary" onclick="addModalToCart()">
+              <i class="fa-solid fa-cart-plus"></i>
+              Thêm vào giỏ
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+            <div class="logo-text">Coffee<span>Shop</span></div>
+          </a>
+          <p class="footer-desc">
+            Không gian kết nối đam mê cà phê Việt. Mang đến trải nghiệm thưởng thức tinh tế với các dòng cà phê phin, đá xay freeze mát lạnh và bánh ngọt thủ công hảo hạng.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khám Phá Menu</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=1">Cà phê truyền thống</a></li>
+            <li><a href="products.html?category=2">Thức uống Freeze đá xay</a></li>
+            <li><a href="products.html?category=3">Trà trái cây tự nhiên</a></li>
+            <li><a href="products.html?category=4">Bánh ngọt & Tiramisu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liên Kết Nhanh</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html">Thực đơn đầy đủ</a></li>
+            <li><a href="contact.html">Thông tin liên hệ</a></li>
+            <li><a href="contact.html#feedbackForm">Gửi phản hồi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Đăng Ký Nhận Ưu Đãi</h4>
+          <div class="footer-newsletter">
+            <p>Nhận ngay mã giảm 20% cho đơn hàng đầu tiên và tin tức mới nhất từ CoffeeShop.</p>
+            <div class="newsletter-box">
+              <input type="email" placeholder="Email của bạn..." aria-label="Email">
+              <button class="btn btn-primary" onclick="alert('Cảm ơn bạn đã đăng ký nhận bản tin!');">Gửi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CoffeeShop. All rights reserved. Tận tâm trong từng giọt cà phê.</p>
+        <p>Hotline: 1900 6868 - Giờ mở cửa: 06:30 - 23:00</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên Hệ & Góp Ý - CoffeeShop</title>
+  <meta name="description" content="Liên hệ với CoffeeShop - Hệ thống cửa hàng cà phê, số điện thoại hotline, địa chỉ các chi nhánh và form gửi phản hồi đóng góp ý kiến.">
+  <!-- Font Awesome 7 CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+        <div class="logo-text">Coffee<span>Shop</span></div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">Trang chủ</a>
+        <a href="products.html" class="nav-link">Sản phẩm</a>
+        <a href="contact.html" class="nav-link active">Liên hệ</a>
+        <a href="javascript:void(0)" class="nav-link" id="navOrdersLink" title="Xem đơn hàng đã lưu"><i class="fa-solid fa-receipt" style="font-size: 13px; margin-right: 5px; color: var(--color-accent-gold);"></i>Đơn Hàng</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" title="Xem giỏ hàng">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       CONTACT HERO BANNER
+       ========================================================================== -->
+  <section class="contact-hero">
+    <div class="container">
+      <span class="section-tag" style="background: rgba(229, 169, 60, 0.2); color: var(--color-accent-gold); margin-bottom: 14px;"><i class="fa-solid fa-comments"></i> Kết Nối Với Chúng Tôi</span>
+      <h1>Liên Hệ & Góp Ý</h1>
+      <p>CoffeeShop luôn trân trọng từng ý kiến đóng góp của bạn để hoàn thiện chất lượng thức uống và dịch vụ mỗi ngày.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN CONTACT LAYOUT & FEEDBACK FORM
+       ========================================================================== -->
+  <main class="section">
+    <div class="container">
+      <div class="contact-layout-grid">
+        
+        <!-- Left: Contact Details Card -->
+        <div class="contact-info-card">
+          <h3>Thông Tin Liên Hệ</h3>
+          <p class="intro">Hãy ghé thăm các chi nhánh của chúng tôi hoặc liên hệ trực tiếp qua hotline và email.</p>
+
+          <div class="info-items-list">
+            <div class="info-box-item">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="info-detail">
+                <h5>Trụ Sở Chính</h5>
+                <p id="branchAddrText">123 Đường Lê Lợi, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</p>
+              </div>
+            </div>
+
+            <div class="info-box-item">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="info-detail">
+                <h5>Tổng Đài Đặt Hàng & CSKH</h5>
+                <p id="branchPhoneText">1900 6868 - 028 3822 9999</p>
+              </div>
+            </div>
+
+            <div class="info-box-item">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="info-detail">
+                <h5>Email Hỗ Trợ</h5>
+                <p>contact@coffeeshop.vn<br>feedback@coffeeshop.vn</p>
+              </div>
+            </div>
+
+            <div class="info-box-item">
+              <div class="info-icon-box">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="info-detail">
+                <h5>Giờ Mở Cửa</h5>
+                <p id="branchHoursText">06:30 - 23:00 (Mở cửa tất cả các ngày trong tuần)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links-row">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" title="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-btn" title="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-btn" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Feedback Form Card -->
+        <div class="feedback-form-card" id="feedbackFormSection">
+          <h3>Gửi Feedback Cho Chúng Tôi</h3>
+          <p class="subtitle">Ý kiến của bạn là động lực để CoffeeShop nâng cao chất lượng mỗi ngày.</p>
+
+          <form id="feedbackForm" novalidate>
+            <div class="form-grid-2col">
+              <div class="form-group">
+                <label for="fbName">Họ và tên <span class="required">*</span></label>
+                <input type="text" id="fbName" class="form-control" placeholder="Nguyễn Văn A" required>
+                <div class="error-msg">Vui lòng nhập họ và tên của bạn</div>
+              </div>
+
+              <div class="form-group">
+                <label for="fbPhone">Số điện thoại <span class="required">*</span></label>
+                <input type="tel" id="fbPhone" class="form-control" placeholder="0901 234 567" required>
+                <div class="error-msg">Vui lòng nhập số điện thoại hợp lệ</div>
+              </div>
+            </div>
+
+            <div class="form-grid-2col">
+              <div class="form-group">
+                <label for="fbEmail">Địa chỉ Email <span class="required">*</span></label>
+                <input type="email" id="fbEmail" class="form-control" placeholder="nguyenvana@gmail.com" required>
+                <div class="error-msg">Vui lòng nhập địa chỉ email hợp lệ</div>
+              </div>
+
+              <div class="form-group">
+                <label for="fbTopic">Chủ đề góp ý</label>
+                <select id="fbTopic" class="form-control">
+                  <option value="Chất lượng đồ uống & món bánh">Chất lượng đồ uống & món bánh</option>
+                  <option value="Thái độ phục vụ của nhân viên">Thái độ phục vụ của nhân viên</option>
+                  <option value="Thời gian giao hàng">Thời gian giao hàng</option>
+                  <option value="Không gian & vệ sinh quán">Không gian & vệ sinh quán</option>
+                  <option value="Đặt bàn & Tổ chức sự kiện">Đặt bàn & Tổ chức sự kiện</option>
+                  <option value="Góp ý khác">Góp ý khác</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Đánh giá trải nghiệm của bạn</label>
+              <div class="rating-picker" title="Chọn số sao đánh giá">
+                <span class="star-item selected" data-val="1"><i class="fa-solid fa-star"></i></span>
+                <span class="star-item selected" data-val="2"><i class="fa-solid fa-star"></i></span>
+                <span class="star-item selected" data-val="3"><i class="fa-solid fa-star"></i></span>
+                <span class="star-item selected" data-val="4"><i class="fa-solid fa-star"></i></span>
+                <span class="star-item selected" data-val="5"><i class="fa-solid fa-star"></i></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="fbMessage">Nội dung phản hồi <span class="required">*</span></label>
+              <textarea id="fbMessage" class="form-control" rows="4" maxlength="500" placeholder="Chia sẻ cảm nhận, góp ý hoặc yêu cầu cụ thể của bạn về CoffeeShop..." required></textarea>
+              <div class="char-counter" id="fbCharCount">0 / 500 ký tự</div>
+              <div class="error-msg">Nội dung phản hồi cần tối thiểu 10 ký tự</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submitFeedbackBtn" style="width: 100%; padding: 15px;">
+              <span>Gửi Phản Hồi Ngay</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       BRANCH LOCATIONS & MAP SECTION
+       ========================================================================== -->
+  <section class="store-locations-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-store"></i> Hệ Thống Cửa Hàng</span>
+        <h2 class="section-title" id="branchNameText">CoffeeShop Bến Nghé (Flagship)</h2>
+        <p class="section-desc">Chọn chi nhánh gần bạn nhất để xem vị trí bản đồ và thông tin chi tiết.</p>
+      </div>
+
+      <div class="branches-selector-tabs">
+        <button class="branch-tab-btn active" data-branch="q1"><i class="fa-solid fa-location-dot"></i> Quận 1 - Bến Nghé (TP.HCM)</button>
+        <button class="branch-tab-btn" data-branch="q3"><i class="fa-solid fa-location-dot"></i> Quận 3 - Võ Văn Tần (TP.HCM)</button>
+        <button class="branch-tab-btn" data-branch="hn"><i class="fa-solid fa-location-dot"></i> Hoàn Kiếm - Tràng Tiền (Hà Nội)</button>
+        <button class="branch-tab-btn" data-branch="dn"><i class="fa-solid fa-location-dot"></i> Hải Châu - Bạch Đằng (Đà Nẵng)</button>
+      </div>
+
+      <div class="map-container-mock">
+        <iframe id="branchMapIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5177583489814!2d106.69916297593257!3d10.771594959279505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f385570472f%3A0x11946f1a79b6d0e8!2zxJDGsOG7nW5nIEzDqiBM4bujaSwgQuG6v24gTmdow6ksIFF14bqtbiAxLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ chi nhánh CoffeeShop"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ ACCORDION SECTION
+       ========================================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Giải Đáp Thắc Mắc</span>
+        <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+        <p class="section-desc">Những thông tin giải đáp nhanh cho quý khách hàng về dịch vụ của CoffeeShop.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-card open">
+          <div class="faq-header">
+            <span>1. CoffeeShop có hỗ trợ giao hàng tận nơi không?</span>
+            <span class="icon-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-body">
+            CoffeeShop hợp tác cùng đội ngũ giao hàng chuyên nghiệp, cam kết giao thức uống trong vòng 30 phút trong bán kính 7km từ cửa hàng gần nhất để đảm bảo độ tươi ngon, chuẩn vị đá xay hay cà phê phin nóng hổi.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-header">
+            <span>2. Nguồn gốc hạt cà phê của CoffeeShop như thế nào?</span>
+            <span class="icon-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-body">
+            100% hạt Robusta và Arabica được chúng tôi tuyển chọn từ các nông trại bền vững tại Cầu Đất (Lâm Đồng) và Buôn Ma Thuột (Đắk Lắk). Cà phê được rang mộc hoàn toàn không pha trộn tạp chất, giữ trọn vẹn hương vị tự nhiên và tốt cho sức khỏe.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-header">
+            <span>3. Tôi có thể đặt bàn trước cho nhóm bạn hoặc sự kiện không?</span>
+            <span class="icon-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-body">
+            Chắc chắn rồi! Quý khách có thể gọi đến hotline 1900 6868 hoặc điền thông tin vào form liên hệ bên trên với chủ đề "Đặt bàn & Tổ chức sự kiện". Quản lý chi nhánh sẽ liên hệ xác nhận trong 15 phút.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-header">
+            <span>4. CoffeeShop có chính sách thành viên và ưu đãi nào không?</span>
+            <span class="icon-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+          </div>
+          <div class="faq-body">
+            Khách hàng đăng ký thành viên sẽ được tích lũy 5% - 10% giá trị hóa đơn cho mỗi lần mua hàng, nhận voucher sinh nhật miễn phí một ly đồ uống bất kỳ và giảm giá 20% vào mỗi thứ Năm hàng tuần.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CART SLIDE DRAWER
+       ========================================================================== -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>
+        <i class="fa-solid fa-bag-shopping"></i>
+        Giỏ Hàng Của Bạn
+      </h3>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically populated by js/cart.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="cart-total-lbl">Tổng cộng:</span>
+        <span class="cart-total-val" id="cartDrawerTotal">0 đ</span>
+      </div>
+      <button class="btn btn-primary checkout-btn" id="cartCheckoutBtn">
+        <span>Tiến Hành Đặt Hàng</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fa-solid fa-mug-hot"></i></div>
+            <div class="logo-text">Coffee<span>Shop</span></div>
+          </a>
+          <p class="footer-desc">
+            Không gian kết nối đam mê cà phê Việt. Mang đến trải nghiệm thưởng thức tinh tế với các dòng cà phê phin, đá xay freeze mát lạnh và bánh ngọt thủ công hảo hạng.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khám Phá Menu</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html?category=1">Cà phê truyền thống</a></li>
+            <li><a href="products.html?category=2">Thức uống Freeze đá xay</a></li>
+            <li><a href="products.html?category=3">Trà trái cây tự nhiên</a></li>
+            <li><a href="products.html?category=4">Bánh ngọt & Tiramisu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liên Kết Nhanh</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html">Thực đơn đầy đủ</a></li>
+            <li><a href="contact.html">Thông tin liên hệ</a></li>
+            <li><a href="contact.html#feedbackForm">Gửi phản hồi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Đăng Ký Nhận Ưu Đãi</h4>
+          <div class="footer-newsletter">
+            <p>Nhận ngay mã giảm 20% cho đơn hàng đầu tiên và tin tức mới nhất từ CoffeeShop.</p>
+            <div class="newsletter-box">
+              <input type="email" placeholder="Email của bạn..." aria-label="Email">
+              <button class="btn btn-primary" onclick="alert('Cảm ơn bạn đã đăng ký nhận bản tin!');">Gửi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CoffeeShop. All rights reserved. Tận tâm trong từng giọt cà phê.</p>
+        <p>Hotline: 1900 6868 - Giờ mở cửa: 06:30 - 23:00</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/auth-ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
